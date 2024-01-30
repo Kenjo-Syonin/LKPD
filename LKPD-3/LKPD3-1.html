@@ -1,0 +1,17 @@
+<script>
+
+    //no 1 jeruk
+
+    let berat = parseFloat(prompt("Masukkan berat jeruk (gram):"));
+    let harga_kg = 500;
+    let harga_sebelum  = (berat / 1000) * harga_kg;
+    let diskon = 0.05 * harga_sebelum;
+    let harga_setelah = harga_sebelum - diskon;
+
+    console.log(`Total Harga Sebelum Diskon: ${ harga_sebelum } rupiah`);
+    console.log(`Diskon: ${ diskon } rupiah`);
+    console.log(`Total Harga Setelah Diskon: ${ harga_setelah } rupiah`);
+
+
+
+</script>

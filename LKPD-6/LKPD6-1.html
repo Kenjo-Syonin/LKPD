@@ -1,0 +1,46 @@
+<script>
+    
+        //no. 1 Juara kelas //blm selesai
+
+        function cariJuaraKelas(siswa) {
+          // Filter siswa yang memenuhi syarat kehadiran
+          const siswaTerdaftar = siswa.filter(s => s.kehadiran === 100);
+
+          // Filter siswa yang memenuhi syarat nilai rata-rata
+          const siswaLolos = siswaTerdaftar.filter(s => {
+            const nilaiRataRata = s.nilai.reduce((total, nilai) => total + nilai, 0) / s.nilai.length;
+            return nilaiRataRata >= 475;
+          });
+      
+          // Urutkan siswa berdasarkan nilai rata-rata
+          const siswaUrut = siswaLolos.sort((a, b) => {
+            const nilaiRataRataA = a.nilai.reduce((total, nilai) => total + nilai, 0) / a.nilai.length;
+            const nilaiRataRataB = b.nilai.reduce((total, nilai) => total + nilai, 0) / b.nilai.length;
+            return nilaiRataRataB - nilaiRataRataA;
+          });
+      
+          // Pilih juara kelas
+          const juaraKelas = siswaUrut[0];
+      
+          return juaraKelas;
+        }
+
+        const siswa = [
+      {
+        nama: "Alice",
+        kehadiran: 100,
+        nilai: [90, 95, 90, 100, 95],
+      },
+      {
+        nama: "Bob",
+        kehadiran: 100,
+        nilai: [85, 90, 85, 95, 90],
+      },
+      // ...
+    ];
+
+    const juaraKelas = cariJuaraKelas(siswa);
+    console.log(juaraKelas);
+
+
+</script>

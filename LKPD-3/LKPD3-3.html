@@ -1,0 +1,18 @@
+<script>
+
+    //no 3 tempratur
+
+    let suhu=parseInt(prompt ("masukan suhu fahrenheit")) ;
+    let celsius = (suhu - 32) * (5 / 9);
+
+    if(suhu> 300){
+        console.log('panas:' + celsius + '°C');
+    }
+    else if(suhu<250){
+        console.log('dingin: ' + celsius + '°C');
+    }
+    else{
+        console.log('normal: ' + celsius + '°C');
+    }
+
+</script>

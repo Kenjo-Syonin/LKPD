@@ -1,0 +1,12 @@
+<script>
+    
+        // no 3 konversi waktu 2
+
+        let totaldetik = parseInt(prompt("Masukkan total detik:"))
+        let jam = Math.floor(totaldetik / 3600);
+        let sisadetik = totaldetik % 3600;
+        let menit = Math.floor(sisadetik / 60);
+        let detik = sisadetik % 60;
+
+        console.log(totaldetik, "detik sama dengan", jam, " jam ", menit, " menit ", detik, " detik.");
+</script>
